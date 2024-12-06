@@ -6,7 +6,9 @@
     --color-body: #918ca4;
 }
 
-/* Typography */
+/* TYPOGRAPHY */
+
+    /* Mobile */
 
 html {
     /* html elements = 16px / 62.5% of 16px = 10px / 1rem = 10px */
@@ -42,6 +44,8 @@ p {
     margin-top: 0;
 }
 
+    /* Desktop */
+
 @media screen and (min-width: 1024px) {
     body {
         font-size: 1.8rem;
@@ -60,7 +64,9 @@ p {
     }
 }
 
-/* Links */
+/* LINKS */
+
+    /* Mobile */
 
  a {
     text-decoration: none;
@@ -83,8 +89,55 @@ p {
     margin-left: 10px;
 }
 
+    /* Desktop */
+
 @media screen and (min-width: 1024px) {
     .link-arrow {
         font-size: 1.5rem;
     }
 }
+
+/* Badges (Object Oriented CSS: Separate Structure from Skin) */
+
+   /* Mobile */
+
+.badge {
+    border-radius: 20px;
+    padding: 0.5rem 2rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.badge--regular {
+    font-size: 2rem;
+}
+
+.badge--small {
+    font-size: 1.6rem;
+}
+
+.badge--primary {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.badge--secondary {
+    background: var(--color-secondary);
+    color: #fff;
+}
+
+    /* Desktop */
+
+@media screen and (min-width: 1024px) {
+    .badge--regular {
+        font-size: 1.5rem;
+    }
+
+    .badge--small {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+ 
