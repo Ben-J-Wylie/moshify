@@ -6,6 +6,14 @@
     --color-body: #918ca4;
 }
 
+
+/* UNIVERSAL SELECTOR */
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+
 /* TYPOGRAPHY */
 
     /* Mobile */
@@ -16,10 +24,10 @@ html {
 }
 
 body {
+    color: var(--color-body);
     font-family: Inter, Arial, Helvetica, sans-serif;
     font-size: 2.4rem;
     line-height: 1.5;
-    color: var(--color-body);
 }
 
 h1, h2, h3 {
@@ -64,6 +72,7 @@ p {
     }
 }
 
+
 /* LINKS */
 
     /* Mobile */
@@ -74,9 +83,9 @@ p {
 
 .link-arrow {
     color: var(--color-accent);
-    text-transform: uppercase;
     font-size: 2rem;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .link-arrow::after {
@@ -97,14 +106,15 @@ p {
     }
 }
 
+
 /* BADGES (Object Oriented CSS: Separate Structure from Skin) */
 
    /* Mobile */
 
 .badge {
     border-radius: 20px;
-    padding: 0.5rem 2rem;
     font-weight: 600;
+    padding: 0.5rem 2rem;
     white-space: nowrap;
 }
 
@@ -138,14 +148,15 @@ p {
     }
 }
 
+
 /* LISTS */
 
    /* Mobile */
 
 .list {
+    color: var(--color-headings);
     list-style: none;
     padding-left: 0;
-    color: var(--color-headings);
 }
 
 .list--inline .list__item {
@@ -159,8 +170,8 @@ p {
 }
 
 .list--tick .list__item {
-    padding-left: 0.5rem;
     margin-bottom: 1rem;
+    padding-left: 0.5rem;
 }
 
     /* Desktop */
@@ -171,13 +182,14 @@ p {
     }
 }
 
+
 /* ICONS */
 
    /* Mobile */
 
 .icon {
-    width: 40px;
     height: 40px;
+    width: 40px;
 }
 
 .icon--primary {
@@ -185,11 +197,81 @@ p {
 }
 
 .icon-container {
+    align-items: center;
     background: #f3f9fa;
-    width: 64px;
-    height: 64px;
     border-radius: 100%;
     display: inline-flex;
+    height: 64px;
     justify-content: center;
-    align-items: center;
+    width: 64px;
+}
+
+
+/* BUTTONS */
+
+   /* Mobile */
+
+.btn {
+    border-radius: 40px;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.8;
+    font-weight: 600;
+    margin: 1rem 0;
+    padding: 2rem 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.btn--block {
+    width: 100%;
+    display: inline-block;
+}
+
+.btn--primary {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.btn--primary:hover {
+    background: #3a8ffd;
+    /* background: lighten(primary, 10%); For the future, look at sas options */
+}
+
+.btn--secondary {
+    background: var(--color-secondary);
+    color: #fff;
+}
+
+.btn--secondary:hover {
+    background: #00c8eb;
+}
+
+.btn--accent {
+    background: var(--color-accent);
+    color: #fff;
+}
+
+.btn--accent:hover {
+    background: #ec3000;
+}
+
+.btn--outline {
+    background: #fff;
+    border: 2px solid var(--color-headings);
+    color: var(--color-headings);
+}
+
+.btn--outline:hover {
+    background: var(--color-headings);
+    color: #fff;
+}
+
+    /* Desktop */
+
+@media screen and (min-width: 1024px) {
+    .btn {
+        font-size: 1.5rem;
+    }
 }
