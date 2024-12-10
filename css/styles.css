@@ -499,4 +499,28 @@ p {
         font-size: 1.6rem;
     }
 }
-   
+
+
+/* GRIDS */
+
+   /* Mobile */
+
+.grid {
+    display: grid;
+}
+
+    /* Tablet */
+
+@media screen and (min-width: 768px) {
+     .grid--1x2 {
+         grid-template-columns: 1fr 1fr;
+    }
+}
+
+    /* Desktop */
+
+@media screen and (min-width: 1024px) {
+    .grid--1x3 {
+        grid-template-columns: 1fr 1fr 1fr;
+   }
+}
