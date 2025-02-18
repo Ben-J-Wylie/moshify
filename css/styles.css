@@ -563,7 +563,7 @@ p {
 
    /* Mobile */
 
-.grid {
+   .grid {
     display: grid;
 }
 
